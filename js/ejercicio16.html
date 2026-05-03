@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sumar Rango</title>
+</head>
+<body>
+
+  <h2>Sumar números en un rango</h2>
+
+  <input type="number" id="inicio" placeholder="Número inicial">
+  <input type="number" id="fin" placeholder="Número final">
+  <button onclick="calcular()">Calcular</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function sumarRango(inicio, fin) {
+      let suma = 0;
+
+      for (let i = inicio; i <= fin; i++) {
+        suma += i;
+      }
+
+      return suma;
+    }
+
+    function calcular() {
+      const inicio = parseInt(document.getElementById("inicio").value);
+      const fin = parseInt(document.getElementById("fin").value);
+
+      if (inicio > fin) {
+        document.getElementById("resultado").textContent =
+          "El número inicial debe ser menor o igual que el final.";
+        return;
+      }
+
+      const resultado = sumarRango(inicio, fin);
+
+      document.getElementById("resultado").textContent =
+        "La suma del rango es: " + resultado;
+    }
+  </script>
+
+</body>
+</html>

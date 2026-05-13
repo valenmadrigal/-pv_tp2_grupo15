@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contar letra A</title>
+</head>
+<body>
+
+  <h2>Contar letra "a"</h2>
+
+  <input type="text" id="texto" placeholder="Escribí un texto">
+  <button onclick="mostrarResultado()">Contar</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function contarLetraA(cadena) {
+      let contador = 0;
+
+      for (let i = 0; i < cadena.length; i++) {
+        if (cadena[i].toLowerCase() === 'a') {
+          contador++;
+        }
+      }
+
+      return contador;
+    }
+
+    function mostrarResultado() {
+      const texto = document.getElementById("texto").value;
+      const cantidad = contarLetraA(texto);
+
+      document.getElementById("resultado").textContent =
+        "La letra 'a' aparece " + cantidad + " veces.";
+    }
+  </script>
+
+</body>
+</html>

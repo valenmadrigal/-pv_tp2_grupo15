@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mostrar Arreglo</title>
+</head>
+<body>
+
+  <h2>Cargar y mostrar arreglo</h2>
+
+  <button onclick="cargarArreglo()">Ingresar números</button>
+
+  <pre id="resultado"></pre>
+
+  <script>
+    function mostrarArreglo(arr) {
+      let salida = "";
+
+      for (let i = 0; i < arr.length; i++) {
+        salida += arr[i] + "\n";
+      }
+
+      document.getElementById("resultado").textContent = salida;
+    }
+
+    function cargarArreglo() {
+      let cantidad = parseInt(prompt("¿Cuántos números querés ingresar?"));
+      let numeros = [];
+
+      for (let i = 0; i < cantidad; i++) {
+        let num = parseFloat(prompt("Ingresá el número " + (i + 1)));
+        numeros.push(num);
+      }
+
+      mostrarArreglo(numeros);
+    }
+  </script>
+
+</body>
+</html>

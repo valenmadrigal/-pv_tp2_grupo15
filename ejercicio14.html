@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 14</title>
+</head>
+<body>
+    
+    <h2>Ejercicio 14 - Duplicar números</h2>
+
+    <script>
+    
+    // Pedir cantidad de números 
+    let cantidad = parseInt(prompt("¿Cuántos números desea ingresar?"));
+    let numeros = [];
+
+    // Cargar el array
+    for (let i = 0; i < cantidad; i++) { 
+        let num = parseInt(prompt(`Ingrese el número ${i + 1}:`));
+        numeros.push(num);
+    }
+
+    // Funcion f
+    const duplicar = (arr) => arr.map(num => num * 2);
+
+    // Llamar a la función 
+    let resultado = duplicar(numeros);
+
+    // Mostrar resultados
+    document.write(`<p>Números originales: ${numeros}</p>`);
+    document.write(`<p>Números duplicados: ${resultado}</p>`);
+
+    </script>
+</body>
+</html>

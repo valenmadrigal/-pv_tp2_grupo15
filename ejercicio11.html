@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 11 - Consumo de combustible</title>
+</head>
+<body>
+  <script>
+    const kilometros = parseFloat(prompt("Ingrese los kilómetros recorridos:"));
+    const litros = parseFloat(prompt("Ingrese los litros de combustible consumidos:"));
+
+    const consumo = litros / kilometros;
+
+    document.write(`
+      <h2>Consumo de combustible</h2>
+      <p>Kilómetros recorridos: ${kilometros} km</p>
+      <p>Litros consumidos: ${litros} L</p>
+      <p>Consumo: ${consumo.toFixed(4)} L/km</p>
+    `);
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 15</title>
+</head>
+<body>
+    <script>
+
+        // Función flecha para retornar el mes
+        const retornarMes = (numero) => { 
+            const meses = [ 
+                "Enero", "Febrero", "Marzo", "Abril",
+                "Mayo", "Junio", "Julio", "Agosto",
+                "Septiembre", "Octubre", "Noviembre", "Diciembre" 
+            ];
+            
+            if (numero >= 1 && numero <= 12) { 
+                return meses[numero - 1]; 
+            } else { 
+                return "Este mes no existe"; 
+            } 
+        };
+
+    // Función principal 
+    const main = () => { 
+        const input = prompt("Ingresá un número (1-12): "); 
+        const numero = parseInt(input); 
+        const resultado = retornarMes(numero); 
+       
+        // Mostrar resultados (cambio console.log por document.write) 
+        document.write(`<p>Número ingresado: ${numero}</p>`); 
+        document.write(`<p>Resultado: ${resultado}</p>`); 
+    };
+    // Ejecutar 
+    main();
+    </script>
+    
+</body>
+</html>
